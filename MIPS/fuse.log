@@ -1,0 +1,26 @@
+Running: D:\Xilinx\12.3\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Xilinx/12.3/workspace/MIPS/cpu_tb_isim_beh.exe -prj D:/Xilinx/12.3/workspace/MIPS/cpu_tb_beh.prj work.cpu_tb work.glbl 
+ISim M.70d (signature 0x16fbe694)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file \"D:/Xilinx/12.3/workspace/MIPS/alu.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/12.3/workspace/MIPS/mips.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/12.3/workspace/MIPS/instruction_memory.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/12.3/workspace/MIPS/data_memory.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/12.3/workspace/MIPS/cpu_top.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/12.3/workspace/MIPS/cpu_tb.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/12.3/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module alu
+Compiling module mips
+Compiling module instruction_memory
+Compiling module data_memory
+Compiling module cpu_top
+Compiling module cpu_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 7 Verilog Units
+Built simulation executable D:/Xilinx/12.3/workspace/MIPS/cpu_tb_isim_beh.exe
+Fuse Memory Usage: 31824 KB
+Fuse CPU Usage: 389 ms

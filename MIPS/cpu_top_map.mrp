@@ -1,0 +1,33 @@
+Release 12.3 Map M.70d (nt64)
+Xilinx Mapping Report File for Design 'cpu_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr
+off -lc off -power off -o cpu_top_map.ncd cpu_top.ngd cpu_top.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.52 $
+Mapped Date    : Sat Jan 04 22:55:13 2014
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Map:116 - The design is empty.  No processing will be done.
+ERROR:Map:52 - Problem encountered processing RPMs. 
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc6slx16' is a WebPack part.

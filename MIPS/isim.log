@@ -1,0 +1,58 @@
+ISim log file
+Running: D:\Xilinx\12.3\workspace\MIPS\cpu_tb_isim_beh.exe -gui -tclbatch isim.cmd -wdb D:/Xilinx/12.3/workspace/MIPS/cpu_tb_isim_beh.wdb 
+ISim M.70d (signature 0x16fbe694)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Time/ps IF-pc     IF-id_ir     ID-reg_A ID-reg_B EX-reg_C EX-d_we MEM-reg_C1   gr0   gr1   gr2   gr3   gr4   gr5   gr6   gr7 EX-cf EX-zf EX-nf IF-i_addr    IF-i_datain     MEM-d_addr MEM-d_datain ID-smdr
+100000   xxxx  xxxxxxxxxxxxxxxx  xxxx    xxxx      xxxx       x      xxxx     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   x     x      x     xxxx    xxxxxxxxxxxxxxxx       xxxx      xxxx       xxxx
+110000   xxxx  xxxxxxxxxxxxxxxx  xxxx    xxxx      xxxx       x      xxxx     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   x     x      x     xxxx    xxxxxxxxxxxxxxxx       xxxx      0000       xxxx
+115000   0000  0000000000000000  0000    0000      0000       0      0000     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     0      0     0000    1101000110000000       0000      0000       0000
+120000   0000  0000000000000000  0000    0000      0000       0      0000     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     0      0     0000    1101000110000000       0000      3c00       0000
+155000   0001  1101000110000000  0000    0000      0000       0      0000     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     1      0     0001    1101001010000001       0000      3c00       0000
+165000   0002  1101001010000001  0000    0000      0000       0      0000     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     1      0     0002    0010001100010010       0000      3c00       0000
+175000   0002  1111101010000001  0000    0001      0000       0      0000     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     1      0     0002    0010001100010010       0000      3c00       0000
+185000   0003  0010001100010010  0000    0001      0001       0      3c00     0000  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     0      0     0003    1101010010000010       0001      ffff       0000
+195000   0004  1101010010000010  3c00    ffff      0001       0      ffff     0000  3c00  xxxx  xxxx  xxxx  xxxx  xxxx  xxxx   0     0      0     0004    1101010110000011       0001      ffff       0000
+205000   0005  1101010110000011  0000    0002      3bff       0      ffff     0000  3c00  ffff  xxxx  xxxx  xxxx  xxxx  xxxx   1     0      0     0005    0011111011000101       3bff      xxxx       0000
+215000   0005  1111110110000011  0000    0003      0002       0      3bff     0000  3c00  ffff  xxxx  xxxx  xxxx  xxxx  xxxx   0     0      0     0005    0011111011000101       0002      3cab       0000
+225000   0006  0011111011000101  0000    0003      0003       0      3cab     0000  3c00  ffff  3bff  xxxx  xxxx  xxxx  xxxx   0     0      0     0006    0010001100010010       0003      aaaa       0000
+235000   0007  0010001100010010  3cab    aaaa      0003       0      aaaa     0000  3c00  ffff  3bff  3cab  xxxx  xxxx  xxxx   0     0      0     0007    0011001100010010       0003      aaaa       0000
+245000   0008  0011001100010010  3c00    ffff      9201       0      aaaa     0000  3c00  ffff  3bff  3cab  aaaa  xxxx  xxxx   1     0      1     0008    0000000000000000       9201      xxxx       0000
+255000   0009  0000000000000000  3c00    ffff      3bff       0      9201     0000  3c00  ffff  3bff  3cab  aaaa  xxxx  xxxx   1     0      0     0009    0011111011000101       3bff      xxxx       0000
+265000   000a  0011111011000101  3c00    ffff      3c00       0      3bff     0000  3c00  ffff  3bff  3cab  aaaa  9201  xxxx   1     0      0     000a    0100111011000101       3c00      xxxx       0000
+275000   000b  0100111011000101  3cab    aaaa      3c00       0      3c00     0000  3c00  ffff  3bff  3cab  aaaa  9201  xxxx   1     0      0     000b    0101111100010010       3c00      xxxx       0000
+285000   000c  0101111100010010  3cab    aaaa      9201       0      3c00     0000  3c00  ffff  3c00  3cab  aaaa  9201  xxxx   1     0      1     000c    0110011100010010       9201      xxxx       0000
+295000   000d  0110011100010010  3c00    ffff      9200       0      9201     0000  3c00  ffff  3c00  3cab  aaaa  9201  xxxx   1     0      1     000d    0110111100010010       9200      xxxx       0000
+305000   000e  0110111100010010  3c00    ffff      3c00       0      9200     0000  3c00  ffff  3c00  3cab  aaaa  9201  xxxx   0     0      0     000e    0111011100100001       3c00      xxxx       0000
+315000   000f  0111011100100001  3c00    ffff      ffff       0      3c00     0000  3c00  ffff  3c00  3cab  aaaa  9200  xxxx   0     0      1     000f    0111111100100001       ffff      xxxx       0000
+325000   0010  0111111100100001  ffff    0001      c3ff       0      ffff     0000  3c00  ffff  3c00  3cab  aaaa  9200  3c00   0     0      1     0010    1000011100100001       c3ff      xxxx       0000
+335000   0011  1000011100100001  ffff    0001      fffe       0      c3ff     0000  3c00  ffff  3c00  3cab  aaaa  9200  ffff   1     0      1     0011    1000111100100001       fffe      xxxx       0000
+345000   0012  1000111100100001  ffff    0001      7fff       0      fffe     0000  3c00  ffff  3c00  3cab  aaaa  9200  c3ff   0     0      0     0012    0001010100001000       7fff      xxxx       0000
+355000   0013  0001010100001000  ffff    0001      fffe       0      7fff     0000  3c00  ffff  3c00  3cab  aaaa  9200  fffe   1     0      1     0013    0000000000000000       fffe      xxxx       0000
+365000   0014  0000000000000000  0000    0008      ffff       0      fffe     0000  3c00  ffff  3c00  3cab  aaaa  9200  7fff   1     0      1     0014    0000000000000000       ffff      xxxx       aaaa
+375000   0015  0000000000000000  0000    0008      0008       1      ffff     0000  3c00  ffff  3c00  3cab  aaaa  9200  fffe   0     0      0     0015    1101011100001000       0008      xxxx       aaaa
+385000   0016  1101011100001000  0000    0008      0008       0      ffff     0000  3c00  ffff  3c00  3cab  aaaa  9200  ffff   0     0      0     0016    0010100000001111       0008      aaaa       aaaa
+395000   0017  0010100000001111  0000    0008      0008       0      ffff     0000  3c00  ffff  3c00  3cab  aaaa  9200  ffff   0     0      0     0017    0011010000110000       0008      aaaa       aaaa
+405000   0018  0011010000110000  0000    000f      0008       0      ffff     0000  3c00  ffff  3c00  3cab  aaaa  9200  ffff   0     0      0     0018    0011101101000010       0008      aaaa       aaaa
+415000   0019  0011101101000010  3c00    000f      000f       0      aaaa     0000  3c00  ffff  3c00  3cab  aaaa  9200  ffff   0     0      0     0019    0100001100000000       000f      0000       aaaa
+425000   001a  0100001100000000  3c0f    ffff      3c0f       0      000f     0000  3c00  ffff  3c00  3cab  aaaa  9200  aaaa   0     0      0     001a    0101011100110000       3c0f      xxxx       aaaa
+435000   001b  0101011100110000  3c10    0000      3c10       0      3c0f     000f  3c00  ffff  3c00  3cab  aaaa  9200  aaaa   1     0      0     001b    0010001100010010       3c10      xxxx       aaaa
+445000   001c  0010001100010010  3c10    000f      3c10       0      3c10     000f  3c00  ffff  3c00  3c0f  aaaa  9200  aaaa   0     0      0     001c    0010001100010010       3c10      xxxx       aaaa
+455000   001d  0010001100010010  3c00    ffff      3c01       0      3c10     000f  3c00  ffff  3c10  3c0f  aaaa  9200  aaaa   0     0      0     001d    xxxxxxxxxxxxxxxx       3c01      xxxx       aaaa
+465000   001e  xxxxxxxxxxxxxxxx  3c00    ffff      3bff       0      3c10     000f  3c00  ffff  3c10  3c0f  aaaa  9200  aaaa   1     0      0     001e    xxxxxxxxxxxxxxxx       3bff      xxxx       aaaa
+475000   001f  xxxxxxxxxxxxxxxx  3c00    ffff      3bff       0      3bff     000f  3c00  ffff  3c10  3c0f  aaaa  9200  aaaa   1     0      0     001f    0000100000000000       3bff      xxxx       aaaa
+485000   0020  0000100000000000  3c00    ffff      3bff       x      3bff     000f  3c00  ffff  3bff  3c0f  aaaa  9200  aaaa   1     0      0     0020    xxxxxxxxxxxxxxxx       3bff      xxxx       aaaa
+495000   0021  xxxxxxxxxxxxxxxx  3c00    ffff      3bff       x      3bff     000f  3c00  ffff  3bff  3c0f  aaaa  9200  aaaa   1     0      0     0021    xxxxxxxxxxxxxxxx       3bff      xxxx       aaaa
+505000   0022  xxxxxxxxxxxxxxxx  3c00    ffff      3bff       0      3bff     000f  3c00  ffff  3bff  3c0f  aaaa  9200  aaaa   1     0      0     0022    xxxxxxxxxxxxxxxx       3bff      xxxx       aaaa
+515000   0023  xxxxxxxxxxxxxxxx  3c00    ffff      3bff       x      3bff     000f  3c00  ffff  3bff  3c0f  aaaa  9200  aaaa   1     0      0     0023    xxxxxxxxxxxxxxxx       3bff      xxxx       aaaa
+525000   0024  xxxxxxxxxxxxxxxx  3c00    ffff      3bff       x      3bff     000f  3c00  ffff  3bff  3c0f  aaaa  9200  aaaa   1     0      0     0024    xxxxxxxxxxxxxxxx       3bff      xxxx       aaaa

@@ -1,0 +1,5 @@
+verilog work "alu.v"
+verilog work "mips.v"
+verilog work "instruction_memory.v"
+verilog work "data_memory.v"
+verilog work "cpu_top.v"

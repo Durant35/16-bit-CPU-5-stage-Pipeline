@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 cpu_top.ngc cpu_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr off -lc off -power off -o cpu_top_map.ncd cpu_top.ngd cpu_top.pcf 
+xst -intstyle ise -ifn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.xst" -ofn "D:/Xilinx/12.3/workspace/MIPS/cpu_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 cpu_top.ngc cpu_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr off -lc off -power off -o cpu_top_map.ncd cpu_top.ngd cpu_top.pcf 

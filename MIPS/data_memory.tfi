@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+data_memory instance_name (
+    .clk(clk), 
+    .d_addr(d_addr), 
+    .d_we(d_we), 
+    .d_wdata(d_wdata), 
+    .d_dataout(d_dataout)
+    );
+
+

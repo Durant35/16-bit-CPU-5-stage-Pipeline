@@ -1,0 +1,37 @@
+Release 12.3 ngdbuild M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\Xilinx\12.3\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 cpu_top.ngc
+cpu_top.ngd
+
+Reading NGO file "D:/Xilinx/12.3/workspace/MIPS/cpu_top.ngc" ...
+Loading design module "D:\Xilinx\12.3\workspace\MIPS/cpu_top.ngc"...
+WARNING:NgdBuild:578 - Design contains no instances.
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 145952 kilobytes
+
+Writing NGD file "cpu_top.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "cpu_top.bld"...

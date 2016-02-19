@@ -1,0 +1,598 @@
+Release 12.3 - xst M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"\Xilinx\12.3\workspace\MIPS\alu.v\" into library work
+Parsing module <alu>.
+Analyzing Verilog file \"\Xilinx\12.3\workspace\MIPS\mips.v\" into library work
+Parsing module <mips>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mips>.
+WARNING:HDLCompiler:413 - "\Xilinx\12.3\workspace\MIPS\mips.v" Line 160: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <alu>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mips>.
+    Related source file is "/xilinx/12.3/workspace/mips/mips.v".
+WARNING:Xst:647 - Input <select_y<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_datain<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <id_ir>.
+    Found 16-bit register for signal <i_addr>.
+    Found 8-bit register for signal <ex_ir>.
+    Found 16-bit register for signal <reg_A>.
+    Found 16-bit register for signal <reg_B>.
+    Found 16-bit register for signal <smdr>.
+    Found 1-bit register for signal <zf>.
+    Found 1-bit register for signal <nf>.
+    Found 1-bit register for signal <cf>.
+    Found 8-bit register for signal <mem_ir>.
+    Found 16-bit register for signal <d_addr>.
+    Found 16-bit register for signal <d_dataout>.
+    Found 8-bit register for signal <wb_ir>.
+    Found 16-bit register for signal <reg_C1>.
+    Found 1-bit register for signal <state>.
+    Found 16-bit adder for signal <pc[15]_GND_1_o_add_58_OUT> created at line 160.
+    Found 8x16-bit dual-port RAM <Mram_gr> for signal <gr>.
+    Found 3-bit comparator equal for signal <i_datain[10]_id_ir[10]_equal_20_o> created at line 121
+    Found 3-bit comparator equal for signal <i_datain[6]_id_ir[10]_equal_35_o> created at line 131
+    Found 3-bit comparator equal for signal <i_datain[2]_id_ir[10]_equal_44_o> created at line 138
+    Found 3-bit comparator equal for signal <id_ir[10]_mem_ir[2]_equal_142_o> created at line 244
+    Found 3-bit comparator equal for signal <id_ir[6]_mem_ir[2]_equal_157_o> created at line 253
+    Found 3-bit comparator equal for signal <id_ir[10]_wb_ir[2]_equal_169_o> created at line 264
+    Found 3-bit comparator equal for signal <id_ir[6]_wb_ir[2]_equal_184_o> created at line 274
+    Found 3-bit comparator equal for signal <ex_ir[2]_id_ir[10]_equal_249_o> created at line 311
+    Found 3-bit comparator equal for signal <ex_ir[2]_id_ir[6]_equal_264_o> created at line 320
+    Found 3-bit comparator equal for signal <id_ir[2]_mem_ir[2]_equal_346_o> created at line 373
+    Found 3-bit comparator equal for signal <id_ir[2]_wb_ir[2]_equal_356_o> created at line 382
+    Found 3-bit comparator equal for signal <ex_ir[2]_id_ir[2]_equal_402_o> created at line 408
+    Summary:
+	inferred   3 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 156 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred  20 Multiplexer(s).
+Unit <mips> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "/xilinx/12.3/workspace/mips/alu.v".
+    Found 17-bit subtractor for signal <GND_2_o_GND_2_o_sub_7_OUT> created at line 80.
+    Found 17-bit subtractor for signal <GND_2_o_GND_2_o_sub_15_OUT> created at line 88.
+    Found 17-bit adder for signal <n0070> created at line 76.
+    Found 17-bit adder for signal <BUS_0002_GND_2_o_add_3_OUT> created at line 77.
+    Found 17-bit shifter logical left for signal <GND_2_o_B[15]_shift_left_10_OUT> created at line 84
+    Found 17-bit shifter logical left for signal <reg_A[15]_B[15]_shift_left_11_OUT> created at line 85
+    Found 17-bit shifter logical right for signal <GND_2_o_B[15]_shift_right_12_OUT> created at line 86
+    Found 17-bit shifter arithmetic right for signal <reg_A[15]_B[15]_shift_right_13_OUT> created at line 87
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cf>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Result<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  17 Latch(s).
+	inferred 293 Multiplexer(s).
+	inferred   4 Combinational logic shifter(s).
+Unit <alu> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 8x16-bit dual-port RAM                                : 3
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 2
+# Registers                                            : 15
+ 1-bit register                                        : 4
+ 16-bit register                                       : 8
+ 8-bit register                                        : 3
+# Latches                                              : 17
+ 1-bit latch                                           : 17
+# Comparators                                          : 12
+ 3-bit comparator equal                                : 12
+# Multiplexers                                         : 313
+ 1-bit 2-to-1 multiplexer                              : 290
+ 16-bit 2-to-1 multiplexer                             : 19
+ 17-bit 2-to-1 multiplexer                             : 4
+# Logic shifters                                       : 4
+ 17-bit shifter arithmetic right                       : 1
+ 17-bit shifter logical left                           : 2
+ 17-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 17-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <mips>.
+The following registers are absorbed into counter <pc>: 1 register on signal <pc>.
+INFO:Xst:3048 - The small RAM <Mram_gr> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wb_ir[7]_wb_ir[7]_OR_469_o_0> | high     |
+    |     addrA          | connected to signal <wb_ir<2:0>>    |          |
+    |     diA            | connected to signal <reg_C1>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <id_ir<10:8>>   |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3048 - The small RAM <Mram_gr1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wb_ir[7]_wb_ir[7]_OR_469_o_1> | high     |
+    |     addrA          | connected to signal <wb_ir<2:0>>    |          |
+    |     diA            | connected to signal <reg_C1>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <id_ir<6:4>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3048 - The small RAM <Mram_gr2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wb_ir[7]_wb_ir[7]_OR_469_o_2> | high     |
+    |     addrA          | connected to signal <wb_ir<2:0>>    |          |
+    |     diA            | connected to signal <reg_C1>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <id_ir<2:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mips> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 8x16-bit dual-port distributed RAM                    : 3
+# Adders/Subtractors                                   : 4
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 2
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 140
+ Flip-Flops                                            : 140
+# Comparators                                          : 12
+ 3-bit comparator equal                                : 12
+# Multiplexers                                         : 311
+ 1-bit 2-to-1 multiplexer                              : 289
+ 16-bit 2-to-1 multiplexer                             : 18
+ 17-bit 2-to-1 multiplexer                             : 4
+# Logic shifters                                       : 4
+ 17-bit shifter arithmetic right                       : 1
+ 17-bit shifter logical left                           : 2
+ 17-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 17-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <nf> in Unit <mips> is equivalent to the following FF/Latch, which will be removed : <reg_C_15> 
+
+Optimizing unit <mips> ...
+
+Optimizing unit <alu> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 7.
+FlipFlop ex_ir_3 has been replicated 1 time(s)
+FlipFlop ex_ir_4 has been replicated 1 time(s)
+FlipFlop ex_ir_5 has been replicated 1 time(s)
+FlipFlop ex_ir_6 has been replicated 1 time(s)
+FlipFlop ex_ir_7 has been replicated 1 time(s)
+FlipFlop id_ir_0 has been replicated 1 time(s)
+FlipFlop id_ir_11 has been replicated 2 time(s)
+FlipFlop id_ir_12 has been replicated 3 time(s)
+FlipFlop id_ir_13 has been replicated 3 time(s)
+FlipFlop id_ir_14 has been replicated 2 time(s)
+FlipFlop id_ir_15 has been replicated 2 time(s)
+FlipFlop id_ir_2 has been replicated 1 time(s)
+FlipFlop mem_ir_7 has been replicated 1 time(s)
+FlipFlop wb_ir_0 has been replicated 1 time(s)
+FlipFlop wb_ir_1 has been replicated 1 time(s)
+FlipFlop wb_ir_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 178
+ Flip-Flops                                            : 178
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mips.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 726
+#      GND                         : 1
+#      INV                         : 16
+#      LUT1                        : 16
+#      LUT2                        : 47
+#      LUT3                        : 88
+#      LUT4                        : 22
+#      LUT5                        : 138
+#      LUT6                        : 223
+#      MUXCY                       : 79
+#      MUXF7                       : 12
+#      VCC                         : 1
+#      XORCY                       : 83
+# FlipFlops/Latches                : 195
+#      FDE                         : 16
+#      FDR                         : 1
+#      FDRE                        : 161
+#      LDC                         : 17
+# RAMS                             : 18
+#      RAM16X1D                    : 12
+#      RAM32M                      : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 84
+#      IBUF                        : 35
+#      OBUF                        : 49
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             195  out of  18224     1%  
+ Number of Slice LUTs:                  598  out of   9112     6%  
+    Number used as Logic:               550  out of   9112     6%  
+    Number used as Memory:               48  out of   2176     2%  
+       Number used as RAM:               48
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    659
+   Number with an unused Flip Flop:     464  out of    659    70%  
+   Number with an unused LUT:            61  out of    659     9%  
+   Number of fully used LUT-FF pairs:   134  out of    659    20%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                         105
+ Number of bonded IOBs:                  85  out of    232    36%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------------+------------------------+-------+
+clk                                                              | BUFGP                  | 196   |
+u1/ALUCode[4]_GND_6_o_Mux_19_o(u1/ALUCode[4]_GND_6_o_Mux_19_o1:O)| NONE(*)(u1/Result_15)  | 17    |
+-----------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.884ns (Maximum Frequency: 169.964MHz)
+   Minimum input arrival time before clock: 5.873ns
+   Maximum output required time after clock: 5.442ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.884ns (frequency: 169.964MHz)
+  Total number of paths / destination ports: 9827 / 493
+-------------------------------------------------------------------------
+Delay:               5.884ns (Levels of Logic = 3)
+  Source:            mem_ir_6 (FF)
+  Destination:       reg_B_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mem_ir_6 to reg_B_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.525   1.175  mem_ir_6 (mem_ir_6)
+     LUT5:I0->O            8   0.254   0.911  mem_ir[7]_mem_ir[7]_OR_249_o1 (mem_ir[7]_mem_ir[7]_OR_249_o)
+     LUT5:I3->O           13   0.250   1.209  mem_ir[7]_id_ir[15]_AND_44_o1 (mem_ir[7]_id_ir[15]_AND_44_o)
+     LUT6:I2->O           16   0.254   1.004  _n0562_inv (_n0562_inv)
+     FDRE:CE                   0.302          reg_B_0
+    ----------------------------------------
+    Total                      5.884ns (1.585ns logic, 4.299ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1654 / 289
+-------------------------------------------------------------------------
+Offset:              5.873ns (Levels of Logic = 5)
+  Source:            i_datain<8> (PAD)
+  Destination:       id_ir_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: i_datain<8> to id_ir_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.228   1.072  i_datain_8_IBUF (i_datain_8_IBUF)
+     LUT6:I0->O            3   0.254   0.651  i_datain[10]_id_ir[10]_equal_20_o31 (i_datain[10]_id_ir[10]_equal_20_o)
+     LUT6:I5->O            2   0.254   0.845  i_datain[15]_i_datain[15]_OR_70_o_SW4 (N351)
+     LUT6:I3->O           16   0.235   1.005  id_ir[15]_i_datain[15]_AND_5_o1 (id_ir[15]_i_datain[15]_AND_5_o)
+     LUT3:I2->O            1   0.254   0.000  Mmux_i_datain[15]_PWR_1_o_mux_60_OUT161 (i_datain[15]_PWR_1_o_mux_60_OUT<9>)
+     FDRE:D                    0.074          id_ir_9
+    ----------------------------------------
+    Total                      5.873ns (2.299ns logic, 3.574ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/ALUCode[4]_GND_6_o_Mux_19_o'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              3.722ns (Levels of Logic = 1)
+  Source:            r_st (PAD)
+  Destination:       u1/Result_15 (LATCH)
+  Destination Clock: u1/ALUCode[4]_GND_6_o_Mux_19_o falling
+
+  Data Path: r_st to u1/Result_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           180   1.228   2.035  r_st_IBUF (r_st_IBUF)
+     LDC:CLR                   0.459          u1/Result_12
+    ----------------------------------------
+    Total                      3.722ns (1.687ns logic, 2.035ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 53 / 49
+-------------------------------------------------------------------------
+Offset:              5.442ns (Levels of Logic = 2)
+  Source:            mem_ir_7 (FF)
+  Destination:       d_we (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mem_ir_7 to d_we
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            20   0.525   1.369  mem_ir_7 (mem_ir_7)
+     LUT5:I1->O            1   0.254   0.579  d_we<7>1 (d_we_OBUF)
+     OBUF:I->O                 2.715          d_we_OBUF (d_we)
+    ----------------------------------------
+    Total                      5.442ns (3.494ns logic, 1.948ns route)
+                                       (64.2% logic, 35.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+clk                           |    5.884|         |         |         |
+u1/ALUCode[4]_GND_6_o_Mux_19_o|         |    4.657|         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u1/ALUCode[4]_GND_6_o_Mux_19_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   10.180|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.31 secs
+ 
+--> 
+
+Total memory usage is 254440 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

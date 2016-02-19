@@ -1,0 +1,11 @@
+[Inputs]
+clk
+d_we
+=d_addr[15:0]=
+=d_wdata[15:0]=
+[Outputs]
+=d_dataout[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel data_memory
+
